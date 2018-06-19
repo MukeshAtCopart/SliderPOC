@@ -1,0 +1,71 @@
+<!--<!DOCTYPE html>
+<html ng-app="sliderApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-animate.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="css/app.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body ng-controller="SliderController">-->
+
+<div class="slider">
+    <div class="slide " ng-repeat="image in images" ng-show="image.visible">
+       <!--<img ng-src="img/{{image.src}}">-->
+
+      <zoom class="zoomPanImage" ng-src="{{getImage(image.src,$index)}}"  frame="image{{$index}}" img="image{{$index}}" zoomlvl="1.5" hdc="{{getIndex($index)}}" index={{$index}}>
+
+      </zoom>
+
+
+    <!--    <canvas width="610" height="305" id="canvas">Sorry, no canvas available</canvas>
+    </div>
+   <!-- <div class="arrows">
+        <a href="#" ng-click="prev()"><img src="img/left-arrow.png"></a>
+        <a href="#" ng-click="next()"><img src="img/right-arrow.png" class="right"></a>
+    </div>
+-->
+
+        <a class="view-hd" ng-click="showHD($event,$index,image.src)" ng-if="hd[$index]">
+            <i class="fa fa-search-plus" >
+
+            </i>
+            HD
+        </a>
+    </div>
+
+    <div class="left-arrow">
+        <a href="#" ng-click="prev()"><img src="img/left-arrow.png"></a>
+    </div>
+
+    <div class="right-arrow">
+        <a href="#" ng-click="next()"><img src="img/right-arrow.png"></a>
+    </div>
+
+    <!--<div ng-repeat="image in images" ng-show="image.visible">-->
+    <!--<a class="view-hd" ng-click="getHD($index)" ng-if="hd[$index]">-->
+        <!--<i class="fa fa-search-plus" >-->
+
+        <!--</i>-->
+        <!--HD-->
+    <!--</a>-->
+    <!--</div>-->
+
+    <div class = "row" >
+        <div class="column" ng-repeat="image in images" >
+            <img ng-src="{{getImage(image.src,$index)}}" ng-click="change($index)" style="width:100%" ng-class="{'selected': image.visible}">
+        </div>
+    </div>
+
+
+</div>
+<!--
+
+</div>
+</body>
+</html>
+
+-->
+

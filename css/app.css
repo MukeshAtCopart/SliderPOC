@@ -1,0 +1,117 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.center-grey{
+    background:#f2f2f2;
+}
+.slider{
+    position: relative;
+    padding: 5px;
+    /*height: 640px;*/
+    width:560px;
+    margin: auto;
+    margin-top: 0px;
+
+
+
+}
+.slide{
+
+ display:inline-block;
+    position:relative;
+    top:0;
+    left:0;
+    height: 330px;
+    width:560px;
+
+    box-shadow: 0px 0px 15px #999;
+    overflow: hidden;
+
+}
+
+.column{
+    float: left;
+    width: 19%;
+    padding:1px;
+    margin: auto;
+}
+
+.row{
+    position:absolute;
+    top:420px;
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.right-arrow{
+     position: absolute;
+     top: 180px;
+     right: 25px;
+ }
+
+.left-arrow{
+    position: absolute;
+    top: 180px;
+}
+
+.right-arrow img{
+    height: 32px;
+}
+
+.left-arrow img{
+    height: 32px;
+}
+
+.selected{
+    border: 1px solid green;
+
+
+}
+
+h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    color: #222;
+}
+
+.slide.ng-hide-add.ng-hide-active,.slide.ng-hide-remove{
+    opacity: 0;
+}
+
+.slide.ng-hide-add, .slide.ng-hide-remove.ng-hide-remove-active{
+    opacity: 1;
+}
+
+.zoomPanFrame{
+    /*display:inline-block;
+    margin-left: auto;
+    margin-right: auto ;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#ECF0F1;
+    border-radius: 0.5em;*/
+}
+
+.zoomPanImage{
+    width: 35em;
+    display: block;
+    transition: transform 2s ease-out;
+    transform: scale(1);
+    transform-origin: 0 0 0px;
+}
+
+.view-hd{
+    color: white;
+    position: absolute;
+    left: 1em!important;
+    top: 10px!important;
+    text-align: left!important;
+    font-size: 20px;
+    width: 75px!important;
+    padding: 10px;
+    border-left:1px white ;
+    text-decoration-color: white;
+}
